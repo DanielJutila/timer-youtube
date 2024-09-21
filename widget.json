@@ -1,0 +1,7 @@
+{
+    "newSubscriber": {
+        "type": "number",
+        "label": "New Subscriber",
+        "value": 1
+    }
+}
