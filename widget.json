@@ -1,12 +1,12 @@
 {
-    "newSubscriber": {
+    "newMember": {
         "type": "integer",
-        "label": "New Subscriber",
-        "value": 5
+        "label": "New Member",
+        "value": 120
     },
     "timerStart": {
         "type": "integer",
         "label": "Timer Start",
-        "value": 5
+        "value": 600
     }
 }
