@@ -3,5 +3,10 @@
         "type": "integer",
         "label": "New Subscriber",
         "value": 5
+    },
+    "timerStart": {
+        "type": "integer",
+        "label": "Timer Start",
+        "value": 5
     }
 }
