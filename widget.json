@@ -1,7 +1,7 @@
 {
     "newSubscriber": {
-        "type": "number",
+        "type": "integer",
         "label": "New Subscriber",
-        "value": 1
+        "value": 5
     }
 }
