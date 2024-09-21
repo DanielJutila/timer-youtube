@@ -8,5 +8,10 @@
         "type": "integer",
         "label": "Timer Start",
         "value": 600
+    },
+    "currentTimer": {
+        "type": "integer",
+        "label": "Current Timer",
+        "value": 0
     }
 }
