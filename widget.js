@@ -15,7 +15,6 @@ const connectWebSocket = () => {
   socket.onmessage = (event) => {
     let message = JSON.parse(event.data);
     if (message.type === "time") {
-      console.log(message.data);
       timerStart = message.data;
       updateCountdown();
     }

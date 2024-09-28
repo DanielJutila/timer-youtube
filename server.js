@@ -18,8 +18,7 @@ wss.on("connection", (ws, req) => {
   const clientIP = req.socket.remoteAddress;
   const clientID = `${clientIP}:${req.socket.remotePort}`;
   console.log(`Client connected: ${clientID}`);
-  console.log(wss.clients.size);
-
+  console.log('clients connected to websocket: ' + wss.clients.size);
   ws.on("message", (message) => {
     console.log(`Received message from ${clientID}: ${message}`);
     const data = JSON.parse(message);
@@ -96,7 +95,6 @@ countDown = () => {
     }
     if (!paused) {
       time--;
-      console.log(time);
       sendMessage();
       if (time % 10 === 0) {
         saveData({ type: "time", data: time });
