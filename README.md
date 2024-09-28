@@ -4,7 +4,7 @@ Download program
 
 npm i to download needed packages.
 
-pkg . --targets node14-win-x64 to (to create .exe of websocket)
+pkg . --targets node14-win-x64 to (to create .exe of websocket) OR download from github and run
 
 connect clients as needed
 
