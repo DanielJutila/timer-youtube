@@ -24,6 +24,7 @@ wss.on("connection", (ws, req) => {
     const data = JSON.parse(message);
 
     if (data.type === "tier") {
+      console.log('New sub ' + data.data);
       addTime(data.data);
     }
     if (data.type === "newMember") {
@@ -138,10 +139,13 @@ rl.on("line", (input) => {
   const [command, value] = input.split(" ");
   if (command === "set" || command === "settime") {
     const startTime = parseInt(value, 10);
-    setStartTime({ type: "startTime", data: startTime });
+    setStartTime({ type: "time", data: startTime });
   }
-  if (input === "timeLeft") {
-    console.log("SEE COMMAND TIME:", time);
+  if (input === "time") {
+    console.log("time left:", time);
+  }
+  if(command === "add") {
+    addTime(parseInt(value, 10));
   }
   if (input === "help" || input === "--help") {
     console.log("");
@@ -149,5 +153,7 @@ rl.on("line", (input) => {
     console.log("resume - resume the timer / starts the timer");
     console.log("clients - get the number of clients connected to websocket");
     console.log("set - set the initial starting timer (its in minutes)");
+    console.log('time - get the time left');
+    console.log('add - add time to the timer');
   }
 });
