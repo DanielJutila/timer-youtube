@@ -101,7 +101,12 @@ function updateCountdown(time) {
     countdownDiv.removeChild(countdownDiv.firstChild);
   }
   const p = document.createElement("p");
+  if(animation){
+    p.textContent = `${hours}:${minutes}:${seconds} +`;
+
+  } else {
   p.textContent = `${hours}:${minutes}:${seconds}`;
+  }
   p.classList.add("countdownText");
   countdownDiv.appendChild(p);
   if (--time < 0) {
