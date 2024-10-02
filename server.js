@@ -145,7 +145,7 @@ rl.on("line", (input) => {
     console.log("time left:", time);
   }
   if(command === "add") {
-    addTime(parseInt(value, 10));
+    addTime(parseInt(value * 60, 10));
   }
   if (input === "help" || input === "--help") {
     console.log("");

@@ -102,7 +102,7 @@ function updateCountdown(time) {
   }
   const p = document.createElement("p");
   if(animation){
-    p.textContent = `${hours}:${minutes}:${seconds} +`;
+    p.textContent = `${hours}:${minutes}:${seconds}+`;
 
   } else {
   p.textContent = `${hours}:${minutes}:${seconds}`;
