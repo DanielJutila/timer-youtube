@@ -55,6 +55,7 @@ window.addEventListener("onEventReceived", function (obj) {
     } else {
       //I think this should add time if no tier
       //So for gifted subs?
+      animateIncrease(timer, 300);
       socket.send(JSON.stringify({ type: "tier", data: 300 }));
     }
   }
